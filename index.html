@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kanban Board</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="app-header">
+        <h1>Kanban Board</h1>
+        <p class="subtitle">A board to keep track of personal tasks.</p>
+      </div>
+
+      <div class="kanban-app">
+        <div class="input-wrapper">
+          <form>
+            <input
+              type="text"
+              id="task-form"
+              name="task-form"
+              placeholder="Type something..."
+            />
+            <button type="submit" id="create-btn">Create Task</button>
+          </form>
+        </div>
+
+        <ul class="columns">
+          <li class="column not-started-column">
+            <div class="column-header">
+              <h4><span class="not-started-highlight">Not Started</span></h4>
+            </div>
+
+            <div class="task-container">
+              <ul class="task-list" id="task-container">
+                <li class="task" draggable="true">
+                  <p contenteditable="true">Take Coco to a vet</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="column in-progress-column">
+            <div class="column-header">
+              <h4><span class="inprogress-highlight">In Progress</span></h4>
+            </div>
+
+            <div class="task-container">
+              <ul class="task-list" id="task-container">
+                <li class="task" draggable="true">
+                  <p contenteditable="true">Taxes 😔</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="column blocked-column">
+            <div class="column-header">
+              <h4><span class="blocked-highlight">Blocked</span></h4>
+            </div>
+
+            <div class="task-container">
+              <ul class="task-list" id="task-container">
+                <li class="task" draggable="true">
+                  <p contenteditable="true">Move</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="column done-column">
+            <div class="column-header">
+              <h4><span class="done-highlight">Done</span></h4>
+            </div>
+
+            <div class="task-container">
+              <ul class="task-list" id="task-container">
+                <li class="task" draggable="true">
+                  <p contenteditable="true">Nothing to be done 🙃</p>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
